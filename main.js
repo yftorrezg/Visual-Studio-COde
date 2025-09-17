@@ -5,12 +5,12 @@ function obtenerEleccionComputadora() {
    return opciones[indice];
 }
 
-function determinarGanador(jugador, computadora) {
-   if (jugador === computadora) return 'Empate';
+function determinarGanador(jugador, compu) {
+   if (jugador === compu) return 'Empate';
    if (
-      (jugador === 'piedra' && computadora === 'tijeras') ||
-      (jugador === 'papel' && computadora === 'piedra') ||
-      (jugador === 'tijeras' && computadora === 'papel')
+      (jugador === 'piedra' && compu === 'tijeras') ||
+      (jugador === 'papel' && compu === 'piedra') ||
+      (jugador === 'tijeras' && compu === 'papel')
    ) {
       return '¡Ganaste!';
    }
@@ -23,8 +23,8 @@ function jugar() {
       alert('Opción inválida');
       return;
    }
-   const computadora = obtenerEleccionComputadora();
-   alert(`Computadora eligió: ${computadora}\n${determinarGanador(jugador, computadora)}`);
+   const compu = obtenerEleccionComputadora();
+   alert(`Computadora eligió: ${compu}\n${determinarGanador(jugador, compu)}`);
 }
 
 jugar();
